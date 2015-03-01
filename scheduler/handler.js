@@ -211,7 +211,19 @@ class Handler {
     // we schedule the task.
     if (!await this.RequiredTask.hasRequiredTasks(taskId)) {
       debug("scheduling: %s", taskId);
-      await this.queue.scheduleTask(taskId);
+      try {
+        await this.queue.scheduleTask(taskId);
+      }
+      catch (err) {
+        if (400 <= err.statusCode && err.statusCode < 600) {
+          // This shouldn't happen too often, but it's expected to happen every
+          // once in a while
+          debug("[expected] Failed to schedule, task perhaps it was already " +
+                "scheduled, err: %s, %j", err, err);
+        } else {
+          throw err;
+        }
+      }
     }
   }
 
