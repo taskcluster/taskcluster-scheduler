@@ -14,10 +14,10 @@ module.exports = {
     statsComponent:               'scheduler',
 
     // Maximum number of messages to process in parallel
-    prefetch:                     10,
+    prefetch:                     50,
 
     // Maximum number of tasks to update at once (per message)
-    parallelism:                  250,
+    parallelism:                  200,
 
     // Extra key to look for dependencies under, this is mostly configurable
     // so that tests can run against production queue
