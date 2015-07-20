@@ -1,3 +1,8 @@
+# DEPRECATED
+
+This application is not currently deployed.
+If you are looking for the implementation of the TaskCluster scheduler, you probably want [`task-graph-scheduler`](https://github.com/taskcluster/task-graph-scheduler).
+
 TaskCluster Task Scheduler (Prototype)
 ======================================
 
