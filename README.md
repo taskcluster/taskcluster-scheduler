@@ -17,8 +17,8 @@ Example below how for to create two dependent tasks:
 var queue = new taskcluster.Queue(...);
 
 // Create two taskIds
-var taskIdA = slugid.v4();
-var taskIdB = slugid.v4();
+var taskIdA = slugid.nice();
+var taskIdB = slugid.nice();
 
 // Define taskA (which is scheduled by taskcluster-scheduler)
 queue.defineTask(taskIdA, {
