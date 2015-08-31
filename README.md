@@ -1,5 +1,5 @@
-TaskCluster Task Scheduler
-==========================
+TaskCluster Task Scheduler (Prototype)
+======================================
 
 This is a simple scheduler that schedules dependent tasks. This is done by
 listening for all task-defined messages, load tasks and read the
