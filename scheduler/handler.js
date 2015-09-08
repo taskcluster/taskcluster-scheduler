@@ -111,7 +111,7 @@ class Handler {
 
     // Check that task.extra[this.extraKey] contains valid slug-ids
     var isValid = task.extra[this.extraKey].every((id) => {
-      return typeof(id) === 'string' && /^[0-9a-z-A-Z_-]{22}$/.test(id);
+      return typeof(id) === 'string' && /^[A-Za-z0-9_-]{8}[Q-T][A-Za-z0-9_-][CGKOSWaeimquy26-][A-Za-z0-9_-]{10}[AQgw]$/.test(id);
     });
     if (!isValid) {
       return debug("task: %s has invalid task.extra.%s: %j",
